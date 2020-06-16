@@ -35,7 +35,7 @@ class App
             $shippingFacility = $this->initialize();
             $shippingFacility->planDelivery();
     } catch (\Exception $e) {
-            error_log('Error occured: ' . $e->getMessage());
+            error_log('Error occurred: ' . $e->getMessage());
         }
     }
 }
