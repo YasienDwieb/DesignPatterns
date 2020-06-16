@@ -9,21 +9,19 @@ require_once '../vendor/autoload.php';
 
 class App
 {
-    private Logistics $shippingFacility;
-
     /**
      * @throws \Exception
      */
-    private function initialize()
+    private function initialize() : Logistics
     {
         $shippingEnvironment = "sea";
 
         switch ($shippingEnvironment) {
             case "land":
-                $this->shippingFacility = new LandLogistics();
+                return new LandLogistics();
                 break;
             case "sea":
-                $this->shippingFacility = new SeaLogistics();
+                return new SeaLogistics();
                 break;
             default:
                 throw new \Exception('This environment is not supported');
@@ -34,8 +32,8 @@ class App
     public function main()
     {
         try {
-            $this->initialize();
-            $this->shippingFacility->planDelivery();
+            $shippingFacility = $this->initialize();
+            $shippingFacility->planDelivery();
     } catch (\Exception $e) {
             error_log('Error occured: ' . $e->getMessage());
         }

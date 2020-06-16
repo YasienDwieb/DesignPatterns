@@ -3,10 +3,8 @@ namespace DesignPatterns\Factory\Logistics;
 
 use DesignPatterns\Factory\Transport\ITransport;
 
-class Logistics {
-    public function createTransport() : ITransport {
-        return new Truck();
-    }
+abstract class Logistics {
+    public abstract function createTransport() : ITransport ;
     
     public function planDelivery()
     {
