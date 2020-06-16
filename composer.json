@@ -1,0 +1,15 @@
+{
+    "name": "yasien/design-patterns",
+    "authors": [
+        {
+            "name": "yasiendwieb",
+            "email": "yasien.dwieb@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "DesignPatterns\\Factory\\": "Factory"
+        }
+    }
+}
