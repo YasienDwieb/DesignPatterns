@@ -12,7 +12,7 @@ class App
     /**
      * @throws \Exception
      */
-    private function initialize() : Logistics
+    private function initialize(): Logistics
     {
         $shippingEnvironment = "sea";
 
@@ -34,7 +34,7 @@ class App
         try {
             $shippingFacility = $this->initialize();
             $shippingFacility->planDelivery();
-    } catch (\Exception $e) {
+        } catch (\Exception $e) {
             error_log('Error occurred: ' . $e->getMessage());
         }
     }
