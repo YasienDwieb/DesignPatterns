@@ -9,7 +9,8 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "DesignPatterns\\Factory\\": "Factory"
+            "DesignPatterns\\Factory\\": "Factory",
+            "DesignPatterns\\AbstractFactory\\": "AbstractFactory"
         }
     }
 }
