@@ -10,7 +10,8 @@
     "autoload": {
         "psr-4": {
             "DesignPatterns\\Factory\\": "Factory",
-            "DesignPatterns\\AbstractFactory\\": "AbstractFactory"
+            "DesignPatterns\\AbstractFactory\\": "AbstractFactory",
+            "DesignPatterns\\Builder\\": "Builder"
         }
     }
 }
